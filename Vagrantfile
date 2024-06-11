@@ -6,7 +6,7 @@ Vagrant.configure("2") do |config|
   end
 
  config.vm.define "wordpress" do |mach1|
-    mach1.vm.box = "CVE-2023-5360"
+    mach1.vm.box = "DEF1"
     mach1.vm.network "private_network", virtualbox__intnet: "intnet", ip: "192.168.1.5", auto_config: false
     mach1.vm.network "forwarded_port", guest: 22, host: 2222, id: "ssh"
     mach1.vm.provider "virtualbox" do |vb|
@@ -14,11 +14,11 @@ Vagrant.configure("2") do |config|
       vb.cpus = 2
     end
     mach1.ssh.username = "adminwp"
-    mach1.ssh.password = "123123"
+    mach1.ssh.password = "ghsdfgsh"
   end
   
   config.vm.define "attack" do |mach3|
-    mach3.vm.box = "kaliattack"
+    mach3.vm.box = "ATTACK"
     mach3.vm.network "private_network", virtualbox__intnet: "intnet", ip: "10.10.0.11", auto_config: false
     mach3.vm.network "forwarded_port", guest: 22, host: 2224, id: "ssh"
     mach3.vm.provider "virtualbox" do |vb|
@@ -26,11 +26,11 @@ Vagrant.configure("2") do |config|
       vb.cpus = 1
     end
     mach3.ssh.username = "kali"
-    mach3.ssh.password = "123"
+    mach3.ssh.password = "awegsdew"
   end
   
   config.vm.define "elk" do |mach2|
-    mach2.vm.box = "ELK"
+    mach2.vm.box = "ELKMON"
     mach2.vm.network "private_network", virtualbox__intnet: "intnet", ip: "192.168.1.10", auto_config: false
 	mach2.vm.network "private_network", virtualbox__intnet: "intnet", ip: "10.10.0.15", auto_config: false
     mach2.vm.network "forwarded_port", guest: 22, host: 2223, id: "ssh"
@@ -40,7 +40,7 @@ Vagrant.configure("2") do |config|
       vb.cpus = 2
     end
     mach2.ssh.username = "adminelk"
-    mach2.ssh.password = "123123"
+    mach2.ssh.password = "gtruiygs"
 	
 	mach2.vm.provision "shell", run: "always" do |s|
     s.inline = <<-SHELL
@@ -50,9 +50,7 @@ Vagrant.configure("2") do |config|
 	  
 	  echo "выполните, что начать атаку: vagrant ssh attack -c 'cd /home && sudo ./main.sh'"
     SHELL
+	end
   end
-  end
-  
-
-  
+ 
 end
