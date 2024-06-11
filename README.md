@@ -12,7 +12,9 @@
 
 `https://hashicorp-releases.yandexcloud.net/vagrant/`
 
-Скачать образы виртуальных машин по ссылке
+Скачать образы виртуальных машин по ссылке:
+
+`https://cloud.mail.ru/public/NqqZ/NgwQSTGWG`
 
 Образы виртуальных машин и `vagrantfile` должны быть в одной директории.
 
