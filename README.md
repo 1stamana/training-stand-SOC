@@ -16,7 +16,7 @@
 
 `https://cloud.mail.ru/public/NqqZ/NgwQSTGWG`
 
-Образы виртуальных машин и `vagrantfile` должны быть в одной директории.
+Образы виртуальных машин и `vagrantfile` должны находиться в одной директории.
 
 В директории с vagrantfile выполить:
 
