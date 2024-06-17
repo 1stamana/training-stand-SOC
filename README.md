@@ -30,11 +30,11 @@
 ## Как начать
 Для запуска атаки необходимо выполнить команду:
 
-`vagrant ssh attack -c "cd /home && sudo ./main.sh"`
+`vagrant ssh attack -c "attack"`
 
 Чтобы начать процесс отслеживания действии злоумышленника, необходимо создать пользователя в elasticsearch:
 
-`vagrant ssh elk -c "/home/./elastic.sh"`
+`vagrant ssh elk -c "elastic"`
 
 Kibana будет доступа по адресу хостовой машины на порту `5601`.
 
