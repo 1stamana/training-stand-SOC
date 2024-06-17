@@ -46,9 +46,9 @@ Vagrant.configure("2") do |config|
     s.inline = <<-SHELL
       # Задержка перед выполнением
 	  echo "Kibana доступна 127.0.0.1:5601"
-	  echo "выполните, что создать пользователя kibana: vagrant ssh elk -c '/home/./elastic.sh'"
+	  echo "выполните, что создать пользователя kibana: vagrant ssh elk -c 'elastic'"
 	  
-	  echo "выполните, что начать атаку: vagrant ssh attack -c 'cd /home && sudo ./main.sh'"
+	  echo "выполните, что начать атаку: vagrant ssh attack -c 'attack'"
     SHELL
 	end
   end
