@@ -1,5 +1,4 @@
 #!/bin/bash
-service mariadb start
 sleep 30
 # Путь к файлу журнала
 log_path="/var/log/mysql/general.log"
